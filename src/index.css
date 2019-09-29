@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(224, 200, 223);
+  background-image: url('https://www.transparenttextures.com/patterns/escheresque.png'),
+    linear-gradient(
+      45deg,
+      rgba(224, 219, 165, 1) 15%,
+      rgba(224, 200, 223, 1) 90%
+    );
 }
 
 code {

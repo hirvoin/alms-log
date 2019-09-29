@@ -1,11 +1,17 @@
 import React from 'react'
-import Button from './components/Button'
+import MainContainer from './styles/MainContainer'
+import Header from './styles/Header'
+import NavBar from './components/NavBar'
+import EntryList from './components/EntryList'
 
-const App = () => (
-  <div>
-    <h2>ALMS-log</h2>
-    <Button />
-  </div>
-)
+const App = () => {
+  return (
+    <>
+      <NavBar />
+      <Header>ALMS-log</Header>
+      <EntryList />
+    </>
+  )
+}
 
 export default App
