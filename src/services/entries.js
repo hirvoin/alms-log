@@ -7,6 +7,12 @@ const getAll = async () => {
   return response.data
 }
 
+const createEntry = async (entryObject) => {
+  const response = await axios.post(baseUrl, entryObject)
+  return response.data
+}
+
 export default {
   getAll,
+  createEntry,
 }

@@ -3,9 +3,10 @@ import styled from 'styled-components'
 import entryService from '../services/entries'
 import Entry from './Entry'
 
-const StyledEntryList = styled.div`
+const StyledContainer = styled.div`
   max-width: 1200px;
   margin: auto;
+  margin-bottom: 50px;
   padding: 30px;
   background: #f0f0f0;
   border: solid;
@@ -27,15 +28,12 @@ const StyledEntryTitle = styled.p`
   font-family: monospace;
   font-style: italic;
   margin: 0px auto 10px auto;
-  /* border: 1px solid #000; */
   flex-basis: 0;
   flex-grow: 1;
   padding: 0 5px 0 5px;
 `
 const StyledTotalsRow = styled.div`
   display: flex;
-  /* border-bottom: solid;
-  border-color: slategray; */
   margin: 50px 5px 5px 5px;
 `
 const StyledTotalTitle = styled.p`
@@ -44,10 +42,7 @@ const StyledTotalTitle = styled.p`
   font-size: 2em;
   font-family: monospace;
   font-style: italic;
-  margin: 0px 10px;
-  /* border: 1px solid #000; */
-  /* flex-basis: 0;
-  flex-grow: 1; */
+  margin: 0px 20px;
   padding: 0 5px 0 5px;
 `
 
@@ -65,13 +60,14 @@ const EntryList = () => {
 
   const calculateTotalDuration = entryArray =>
     entryArray.reduce((prev, curr) => prev + curr.duration, 0)
+
   console.log(entries)
 
   return (
-    <StyledEntryList>
+    <StyledContainer>
       <StyledTitleRow>
-        <StyledEntryTitle>Date</StyledEntryTitle>
-        <StyledEntryTitle>Duration</StyledEntryTitle>
+        <StyledEntryTitle>Date (mm/dd/yyy)</StyledEntryTitle>
+        <StyledEntryTitle>Duration (h)</StyledEntryTitle>
         <StyledEntryTitle>Activity</StyledEntryTitle>
         <StyledEntryTitle>Focus</StyledEntryTitle>
         <StyledEntryTitle>Reflection</StyledEntryTitle>
@@ -80,10 +76,11 @@ const EntryList = () => {
         <Entry key={entry._id} entry={entry} />
       ))}
       <StyledTotalsRow>
-        <StyledTotalTitle>Total hours:</StyledTotalTitle>
-        <StyledTotalTitle>{calculateTotalDuration(entries)}</StyledTotalTitle>
+        <StyledTotalTitle>
+          Total: {calculateTotalDuration(entries)} hours
+        </StyledTotalTitle>
       </StyledTotalsRow>
-    </StyledEntryList>
+    </StyledContainer>
   )
 }
 

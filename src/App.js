@@ -1,8 +1,8 @@
 import React from 'react'
-import MainContainer from './styles/MainContainer'
 import Header from './styles/Header'
 import NavBar from './components/NavBar'
 import EntryList from './components/EntryList'
+import NewEntryForm from './components/NewEntryForm'
 
 const App = () => {
   return (
@@ -10,6 +10,7 @@ const App = () => {
       <NavBar />
       <Header>ALMS-log</Header>
       <EntryList />
+      <NewEntryForm />
     </>
   )
 }

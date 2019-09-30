@@ -15,13 +15,22 @@ const StyledNavBarItem = styled.li`
   display: block;
   margin: 20px;
   text-shadow: 2px 2px 1px #1f1f1f;
+  text-decoration: none;
+
+  &:hover {
+    color: #fff7a4;
+  }
 `
 
 const NavBar = () => {
   return (
     <StyledNavBar>
-      <StyledNavBarItem>Home</StyledNavBarItem>
-      <StyledNavBarItem>About</StyledNavBarItem>
+      <StyledNavBarItem as="a" href="/">
+        Home
+      </StyledNavBarItem>
+      <StyledNavBarItem as="a" href="/">
+        About
+      </StyledNavBarItem>
     </StyledNavBar>
   )
 }

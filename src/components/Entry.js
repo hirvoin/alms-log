@@ -1,5 +1,6 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
+import Markdown from 'react-markdown'
 
 const StyledEntryRow = styled.div`
   display: flex;
@@ -10,11 +11,17 @@ const StyledEntryRow = styled.div`
 const StyledEntryCell = styled.div`
   font-size: 1.2em;
   font-family: monospace;
-  margin: 10px auto 10px auto;
-  /* border: 1px solid #000; */
+  margin: 15px auto 10px auto;
   flex-basis: 0;
   flex-grow: 1;
   padding: 0 5px 0 5px;
+
+  ${(props) =>
+    props.markdown &&
+    css`
+      margin: 0px auto;
+      padding: 0;
+    `}
 `
 
 const Entry = ({ entry }) => {
@@ -24,9 +31,17 @@ const Entry = ({ entry }) => {
     <StyledEntryRow>
       <StyledEntryCell>{date.toLocaleDateString()}</StyledEntryCell>
       <StyledEntryCell>{entry.duration}</StyledEntryCell>
-      <StyledEntryCell>{entry.activity}</StyledEntryCell>
-      <StyledEntryCell>{entry.focus}</StyledEntryCell>
-      <StyledEntryCell>{entry.reflection}</StyledEntryCell>
+      <StyledEntryCell markdown>
+        {' '}
+        <Markdown source={entry.activity} />
+      </StyledEntryCell>
+      <StyledEntryCell markdown>
+        {' '}
+        <Markdown source={entry.focus} />
+      </StyledEntryCell>
+      <StyledEntryCell markdown>
+        <Markdown source={entry.reflection} />
+      </StyledEntryCell>
     </StyledEntryRow>
   )
 }
