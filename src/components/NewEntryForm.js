@@ -26,23 +26,44 @@ const StyledLabel = styled.p`
   font-style: italic;
 `
 const StyledButton = styled.button`
+  margin: 10px;
+  padding: 5px;
   text-align: center;
-  display: inline-block;
+  color: #f1f1f1;
+  font-size: 1.2em;
+  font-family: monospace;
+  font-style: italic;
+  text-shadow: 1px 1px 1px #1f1f1f;
   border-radius: 3px;
-  border: solid rgba(71, 12, 69, 1);
-  padding: 5px 0;
-  margin: 5px;
-  width: 11rem;
-  background: white;
-  color: rgba(71, 12, 69, 1);
-  border: 2px solid white;
+  width: 200px;
+  background: rgba(71, 12, 69, 0.8);
+  border: 2px rgba(71, 12, 69, 0.8);
+  box-shadow: 2px 3px 2px slategray;
+
+  &:hover {
+    color: #fff7a4;
+  }
 
   ${(props) =>
-    props.negative &&
+    props.red &&
     css`
-      background: red;
+      background: #a84251;
       color: white;
     `}
+
+  ${(props) =>
+    props.blue &&
+    css`
+      background: #4288a8;
+      color: white;
+    `}
+`
+
+const StyledTitleRow = styled.div`
+  display: flex;
+  border-bottom: solid;
+  border-color: slategray;
+  margin: 5px 5px 10px 5px;
 `
 
 const NewEntryForm = () => {
@@ -75,9 +96,11 @@ const NewEntryForm = () => {
     setReflection('')
   }
 
-  console.log(tag)
   return (
     <StyledContainer>
+      <StyledTitleRow>
+        <h3>Add a new log entry</h3>
+      </StyledTitleRow>
       <form>
         <div style={{ display: 'flex' }}>
           <div style={{ margin: '0 auto' }}>
@@ -136,10 +159,10 @@ const NewEntryForm = () => {
                 id="reflection"
               />
             </StyledFormRow>
-            <StyledButton type="button" onClick={() => handleReset()} negative>
+            <StyledButton type="button" onClick={() => handleReset()} red>
               Reset
             </StyledButton>
-            <StyledButton type="button" onClick={() => handleSubmit()}>
+            <StyledButton type="button" onClick={() => handleSubmit()} blue>
               Submit entry
             </StyledButton>
           </div>

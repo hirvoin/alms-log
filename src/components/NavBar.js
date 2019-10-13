@@ -3,8 +3,8 @@ import styled from 'styled-components'
 
 const StyledNavBar = styled.ul`
   margin: 0 0 40px;
-  background: rgba(71, 12, 69, 1);
-  box-shadow: 0px 5px 2px slategray;
+  background: rgba(71, 12, 69);
+  box-shadow: -1px 3px 2px slategray;
   display: flex;
 `
 

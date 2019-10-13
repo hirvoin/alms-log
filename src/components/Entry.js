@@ -7,6 +7,9 @@ const StyledEntryRow = styled.div`
   border-bottom: solid;
   border-color: #c9c9c9;
   margin: 5px;
+  &:hover {
+    background: #c9c9c9;
+  }
 `
 const StyledEntryCell = styled.div`
   font-size: 1.2em;
@@ -25,7 +28,6 @@ const StyledEntryCell = styled.div`
 `
 
 const Entry = ({ entry }) => {
-  console.log(entry)
   const date = new Date(entry.date)
   return (
     <StyledEntryRow>
