@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import entryService from './services/entries'
 import NavBar from './components/NavBar'
-import EntryList from './components/EntryList'
-import NewEntryForm from './components/NewEntryForm'
+import EntryPage from './components/EntryPage'
+import AboutPage from './components/AboutPage'
 
 const App = () => {
   const [entries, setEntries] = useState([])
@@ -17,12 +18,15 @@ const App = () => {
   }, [])
 
   return (
-    <>
+    <Router>
       <NavBar />
-      <h1>ALMS-log</h1>
-      <EntryList entries={entries} />
-      <NewEntryForm />
-    </>
+      <Route
+        exact
+        path="/"
+        render={(props) => <EntryPage {...props} entries={entries} />}
+      />
+      <Route path="/about" exact component={AboutPage} />
+    </Router>
   )
 }
 

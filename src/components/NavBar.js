@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import { Link } from 'react-router-dom'
 
 const StyledNavBar = styled.ul`
   margin: 0 0 40px;
@@ -25,12 +26,12 @@ const StyledNavBarItem = styled.li`
 const NavBar = () => {
   return (
     <StyledNavBar>
-      <StyledNavBarItem as="a" href="/">
-        Home
-      </StyledNavBarItem>
-      <StyledNavBarItem as="a" href="/">
-        About
-      </StyledNavBarItem>
+      <Link style={{ textDecoration: 'none' }} to="/">
+        <StyledNavBarItem>Home</StyledNavBarItem>
+      </Link>
+      <Link style={{ textDecoration: 'none' }} to="/about">
+        <StyledNavBarItem>About</StyledNavBarItem>
+      </Link>
     </StyledNavBar>
   )
 }

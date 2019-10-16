@@ -21,7 +21,8 @@ h1 {
   font-style: italic;
   text-shadow: 3px 3px 2px slategray;
   color: #f0f0f0;
-  margin: 0 40% 40px;
+  margin: 0 0 40px 0;
+  display: inline-block;
 }
 
 h2 {
