@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import styled, { css } from 'styled-components'
-import Entry from './Entry'
-import FilterButtonList from './FilterButtonList'
+import EntryListItem from './EntryListItem'
 
 const StyledContainer = styled.div`
   max-width: 1200px;
@@ -126,7 +125,7 @@ const EntryList = ({ entries }) => {
           <h3>Reflection</h3>
         </StyledTitleRow>
         {filteredEntries.map((entry) => (
-          <Entry key={entry._id} entry={entry} />
+          <EntryListItem key={entry._id} entry={entry} />
         ))}
         <StyledTotalsRow>
           <h2>Total: {calculateTotalDuration(filteredEntries)} hours</h2>

@@ -131,7 +131,7 @@ const NewEntryForm = () => {
             <StyledFormRow>
               <StyledLabel>Tag: </StyledLabel>
               <select onChange={(event) => setTag(event.target.value)} id="tag">
-                <option value="reading" defaultValue>
+                <option value="reading" defaultValueb>
                   reading
                 </option>
                 <option value="listening">listening</option>

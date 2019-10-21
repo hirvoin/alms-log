@@ -2,7 +2,7 @@ import React from 'react'
 import EntryList from './EntryList'
 import NewEntryForm from './NewEntryForm'
 
-const EntryPage = ({ entries }) => {
+const EntriesPage = ({ entries }) => {
   return (
     <>
       <div style={{ textAlign: 'center' }}>
@@ -14,4 +14,4 @@ const EntryPage = ({ entries }) => {
   )
 }
 
-export default EntryPage
+export default EntriesPage
