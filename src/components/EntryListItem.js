@@ -30,6 +30,14 @@ const StyledEntryCell = styled.div`
 `
 
 const EntryListItem = ({ entry }) => {
+  const shortenText = (text) => {
+    if (text.length > 75) {
+      const newText = text.slice(0, 75).concat('...')
+      return newText
+    }
+    return text
+  }
+
   const date = new Date(entry.date)
   return (
     <Link to={`/${entry._id}`} style={{ textDecoration: 'none' }}>
@@ -42,10 +50,10 @@ const EntryListItem = ({ entry }) => {
         </StyledEntryCell>
         <StyledEntryCell markdown>
           {' '}
-          <Markdown source={entry.focus} />
+          <Markdown source={shortenText(entry.focus)} />
         </StyledEntryCell>
         <StyledEntryCell markdown>
-          <Markdown source={entry.reflection} />
+          <Markdown source={shortenText(entry.reflection)} />
         </StyledEntryCell>
       </StyledEntryRow>
     </Link>
