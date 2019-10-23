@@ -1,6 +1,6 @@
 import axios from 'axios'
 
-const baseUrl = 'http://localhost:3001/api/login'
+const baseUrl = 'https://infinite-mesa-21324.herokuapp.com/api/login'
 
 const login = async (credentials) => {
   const response = await axios.post(baseUrl, credentials)

@@ -76,9 +76,7 @@ const LoginForm = () => {
 
   const handleSubmit = async () => {
     const credentials = { username, password }
-    console.log(credentials)
     const loggedUser = await loginService.login(credentials)
-    console.log(loggedUser)
     setUser(loggedUser)
     window.localStorage.setItem('loggedUser', JSON.stringify(loggedUser))
     entryService.setToken(loggedUser.token)
