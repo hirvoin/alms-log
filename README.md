@@ -1,3 +1,3 @@
-## Activity log for ALMS English (Autumn 2019)
+## Activity log for ALMS English course (Autumn 2019)
 
-Made with React, styled-components, node, express
+Full-stack React/node application for keeping track of my progress in the ALMS-course.
