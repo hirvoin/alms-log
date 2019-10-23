@@ -25,17 +25,6 @@ h1 {
   display: inline-block;
 }
 
-h1 {
-  font-weight: normal;
-  font-size: 6em;
-  font-family: monospace;
-  font-style: italic;
-  text-shadow: 3px 3px 2px slategray;
-  color: #f0f0f0;
-  margin: 0 0 40px 0;
-  display: inline-block;
-}
-
 h2 {
   font-weight: normal;
   color: rgba(71, 12, 69, 1);
@@ -44,7 +33,7 @@ h2 {
   font-family: monospace;
   font-style: italic;
   margin: 0px 20px;
-  padding: 0 5px 0 5px;
+  /* padding: 0 5px 0 5px; */
 }
 
 h3 {

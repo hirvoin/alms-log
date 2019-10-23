@@ -15,7 +15,7 @@ const StyledEntryRow = styled.div`
 const StyledEntryCell = styled.div`
   font-size: 1.2em;
   font-family: monospace;
-  margin: 15px auto 10px auto;
+  margin: 15px 10px 10px 0px;
   flex-basis: 0;
   flex-grow: 1;
   padding: 0 5px 0 5px;
@@ -24,7 +24,7 @@ const StyledEntryCell = styled.div`
   ${(props) =>
     props.markdown &&
     css`
-      margin: 0px auto;
+      margin: 0px 5px;
       padding: 0;
     `}
 `
