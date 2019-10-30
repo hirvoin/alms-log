@@ -41,6 +41,8 @@ const AboutPage = () => {
         </StyledTitleRow>
         <StyledText>
           This page works as a log during Autumn 2019 ALMS English course.
+          Source code can be found from{' '}
+          <a href="https://github.com/hirvoin/alms-log">github</a>.
         </StyledText>
       </StyledContainer>
     </>
