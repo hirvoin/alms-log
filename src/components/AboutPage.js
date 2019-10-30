@@ -23,7 +23,7 @@ const StyledText = styled.p`
   color: #1f1f1f;
   font-size: 1.3em;
   font-family: monospace;
-  margin: 20px auto 10px;
+  margin: 20px auto 10px 50;
   flex-basis: 0;
   flex-grow: 1;
   padding: 0 30px;
@@ -41,8 +41,8 @@ const AboutPage = () => {
         </StyledTitleRow>
         <StyledText>
           This page works as a log during Autumn 2019 ALMS English course.
-          Source code can be found from{' '}
-          <a href="https://github.com/hirvoin/alms-log">github</a>.
+          Source code can be found from my{' '}
+          <a href="https://github.com/hirvoin/alms-log">GitHub</a>.
         </StyledText>
       </StyledContainer>
     </>
