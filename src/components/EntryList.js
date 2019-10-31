@@ -118,7 +118,7 @@ const EntryList = ({ entries }) => {
       </StyledButtonRow>
       <StyledContainer>
         <StyledTitleRow>
-          <h3>Date (mm/dd/yyy)</h3>
+          <h3>Date (mm/dd/yyyy)</h3>
           <h3>Duration (h)</h3>
           <h3>Activity</h3>
           <h3>Focus</h3>
